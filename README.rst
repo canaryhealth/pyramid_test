@@ -68,6 +68,7 @@ Limitations
 ===========
 
 * We can only run tests sequentially in a single process. This is due to:
+
   * To speed up the creation of an unique test database for each test case, we copy it from a primary test database instead of creating one from scratch. The primary test database must not have any opened connections when the copy occurs.
   * We use a singleton to generate unique port numbers for `BrowserTestCase`. May need to make this thread-safe.
 
